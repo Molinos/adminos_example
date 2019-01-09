@@ -25,3 +25,19 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/.bundle
+/config/application.yml
+/config/database.yml
+/log/*.log
+/log/*.pid
+/public/assets/*
+/public/system/*
+/tmp
+/db/*.sql.bz2
+.env
+spec/examples.txt
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity

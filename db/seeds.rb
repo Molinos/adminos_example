@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Settings.reset_column_information
+Settings.first_or_initialize.update_attributes email: 'studio@molinos.ru', email_header_from: 'studio@molinos.ru', company_name: 'Molinos'
+User.create email: 'studio@molinos.ru', password: 'changeme', roles: [:admin]

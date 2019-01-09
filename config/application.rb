@@ -19,6 +19,19 @@ Bundler.require(*Rails.groups)
 
 module DemoAdminos
   class Application < Rails::Application
+    config.i18n.default_locale = :ru
+    config.time_zone = 'Moscow'
+    config.i18n.available_locales = [:ru]
+    config.generators { |g| g.test_framework :rspec }
+    config.action_mailer.default_url_options = { host: 'molinos.ru' }
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.to_prepare do
+      Devise::SessionsController.layout 'admin'
+      Devise::RegistrationsController.layout proc { |controller| user_signed_in? ? 'application' : 'admin' }
+      Devise::ConfirmationsController.layout 'admin'
+      Devise::UnlocksController.layout 'admin'
+      Devise::PasswordsController.layout 'admin'
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
