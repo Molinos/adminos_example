@@ -1,0 +1,13 @@
+.f__fieldset
+  = f.input :name
+  = f.input :published, wrapper: :check
+
+.f__fieldset
+  .f__legend Poll options
+  #poll_options
+    .nested-list
+      .nested-node
+        = f.simple_fields_for :poll_options do |poll_option|
+          = render 'poll_option_fields', f: poll_option
+      .list__action
+        = link_to_add_association 'Add option', f, :poll_options, class: 'btn btn-secondary btn-secondary--alt'

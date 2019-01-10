@@ -26,6 +26,8 @@
             .nav__group
               .nav__group-title.js-nav-group-toggle= t('labels.admin.other')
               .nav__group-content.nav__group-content--other
+                = top_menu_item active: 'admin/polls#' do
+                  = link_to t('admin.polls.actions.index.header'), admin_polls_path, class: 'nav__link'
                 = top_menu_item active: 'admin/articles#' do
                   = link_to t('admin.articles.actions.index.header'), admin_articles_path, class: 'nav__link'
                 / links

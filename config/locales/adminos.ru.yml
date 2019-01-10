@@ -217,6 +217,21 @@ ru:
           new_stay_in_place: Применить
           update: Сохранить article
           update_stay_in_place: Применить
+    polls:
+      actions:
+        index:
+          header: Polls
+          title: Polls
+      labels:
+        actions:
+          create: Добавить poll
+          create_stay_in_place: Применить
+          edit: Сохранить poll
+          edit_stay_in_place: Применить
+          new: Добавить poll
+          new_stay_in_place: Применить
+          update: Сохранить poll
+          update_stay_in_place: Применить
     helps:
       actions:
         index:

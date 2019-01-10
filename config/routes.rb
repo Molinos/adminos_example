@@ -14,6 +14,11 @@ Rails.application.routes.draw do
     
   scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do 
   namespace :admin do
+    resources :polls, except: :show do
+      collection { post :batch_action }
+      member { post :duplication }
+    end
+
     resources :articles, except: :show do
       collection { post :batch_action }
       member { post :duplication }

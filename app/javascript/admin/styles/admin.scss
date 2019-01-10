@@ -54,3 +54,21 @@
     }
   }
 }
+
+
+.nested-list {
+  padding: 0;
+
+  .list__remove {
+    display: inline-block;
+    margin: 0 0 0 220px;
+  }
+
+  .list__action {
+    padding: 20px 0 0 220px;
+  }
+
+  .nested-fields {
+    margin-bottom: 20px;
+  }
+}
