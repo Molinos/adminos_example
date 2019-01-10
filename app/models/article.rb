@@ -8,6 +8,8 @@ class Article < ApplicationRecord
 
   belongs_to :user
 
+  has_many :comments, dependent: :destroy
+
   has_paper_trail
   slugged :recognizable_name
   flag_attrs :published

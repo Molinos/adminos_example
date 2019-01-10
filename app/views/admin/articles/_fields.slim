@@ -13,3 +13,10 @@
   = f.input :tags
   = f.association :user, label_method: :email, wrapper: :select
 
+.response-sidebar
+  .response-sidebar__comments
+    .f-group
+      .f-group__label Comments
+      .comments
+        .comments__list
+          = render partial: 'comment', collection: resource.comments.sorted
