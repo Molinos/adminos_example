@@ -4,6 +4,11 @@
   = f.input :published, wrapper: :check
 
   = f.input :title
+
+.f__fieldset
+  = f.rich_text_area :content
+
+.f__fieldset
   = f.input :publish_at
   = f.input :tags
   = f.association :user, label_method: :email, wrapper: :select

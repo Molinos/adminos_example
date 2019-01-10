@@ -3,7 +3,11 @@ class Article < ApplicationRecord
   include Adminos::FlagAttrs
   include Adminos::Recognizable
   include Adminos::NestedSet::Duplication
+
+  has_rich_text :content
+
   belongs_to :user
+
   has_paper_trail
   slugged :recognizable_name
   flag_attrs :published
