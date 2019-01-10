@@ -202,6 +202,21 @@ ru:
       create: Создание
       update: Обновление
       destroy: Удаление
+    articles:
+      actions:
+        index:
+          header: Articles
+          title: Articles
+      labels:
+        actions:
+          create: Добавить article
+          create_stay_in_place: Применить
+          edit: Сохранить article
+          edit_stay_in_place: Применить
+          new: Добавить article
+          new_stay_in_place: Применить
+          update: Сохранить article
+          update_stay_in_place: Применить
     helps:
       actions:
         index:
