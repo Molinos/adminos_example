@@ -3,8 +3,12 @@ class Article < ApplicationRecord
   include Adminos::FlagAttrs
   include Adminos::Recognizable
   include Adminos::NestedSet::Duplication
+  include Adminos::Cropped
 
   has_rich_text :content
+  has_one_attached :cover
+
+  cropped :cover
 
   belongs_to :user
 

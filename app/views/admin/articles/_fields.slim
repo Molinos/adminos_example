@@ -1,9 +1,11 @@
 .f__fieldset
   = f.input :name
+  = f.input :title
   = f.input :slug
   = f.input :published, wrapper: :check
 
-  = f.input :title
+.f__fieldset
+  = f.input :cover, as: :cropp
 
 .f__fieldset
   = f.rich_text_area :content
