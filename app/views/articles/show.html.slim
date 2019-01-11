@@ -1,2 +1,19 @@
-h1 Articles#show
-p Find me in app/views/articles/show.html.slim
+
+header.masthead[style="background-image: url(#{rails_blob_path(@article.cover)})"]
+  .overlay
+  .container
+    .row
+      .col-lg-8.col-md-10.mx-auto
+        .post-heading
+          h1= @article.name
+          h2.subheading= @article.title
+          span.meta
+            | Posted by
+            a[href="#"]
+              | #{@article.user.email}
+            |  on #{l(@article.publish_at)}
+article
+  .container
+    .row
+      .col-lg-8.col-md-10.mx-auto
+        == @article.content
