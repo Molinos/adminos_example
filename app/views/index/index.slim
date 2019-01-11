@@ -1,0 +1,29 @@
+header.masthead[style="background-image: url(#{asset_pack_path('client/img/home-bg.jpg')})"]
+  .overlay
+  .container
+    .row
+      .col-lg-8.col-md-10.mx-auto
+        .site-heading
+          h1
+            | Adminos Blog
+          span.subheading
+            | Adminos technical blog
+.container
+  .row
+    .col-lg-8.col-md-10.mx-auto
+      - @articles.each do |article|
+        .post-preview
+          = link_to article
+
+            h2.post-title= article.name
+            h3.post-subtitle= article.title
+            p.post-meta
+              ' Posted by
+              a[href="#"]
+                ' #{article.user.email}
+              '  on #{l(article.publish_at)}
+        hr
+
+      .clearfix
+        a.btn.btn-primary.float-right[href="#"]
+          | Older Posts →

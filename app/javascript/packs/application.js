@@ -7,5 +7,12 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
+
+importAll(require.context('../client/img/'));
+
+import '../client/css/main.scss'
+
+import 'bootstrap/dist/js/bootstrap.min.js'
+import '../client/js/clean-blog.min.js'
+
 import "actiontext"

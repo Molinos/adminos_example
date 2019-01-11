@@ -2,6 +2,7 @@
   "name": "demo_adminos",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.3",
     "@rails/webpacker": "3.5",
     "actiontext": "https://github.com/rails/actiontext#cfe4674d3637c746cdb3c2b5131e2de498775529",
     "adminos": "^1.0.0-rc.3",

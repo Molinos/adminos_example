@@ -11,8 +11,8 @@ Rails.application.routes.draw do
       post 'authentications/link', to: 'authentications#link'
     end
 
-    
-  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do 
+
+  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
   namespace :admin do
     resources :polls, except: :show do
       collection { post :batch_action }
@@ -67,5 +67,9 @@ Rails.application.routes.draw do
 
     # ADMINOS ROUTES END
     devise_for :users, skip: :all
+
+    root to: 'index#index'
+    resources :articles
+
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
