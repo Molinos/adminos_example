@@ -18,13 +18,13 @@ environment.loaders.get('sass').use.splice(-1, 0, {
 
 
 // Insert before a given plugin
-environment.plugins.insert('CommonChunkVendor',
-  new webpack.optimize.CommonsChunkPlugin({
-    name: 'vendor', // Vendor code
-    minChunks: (module) => module.context && module.context.indexOf('node_modules') !== -1
-  }), {
-    before: 'manifest'
-  })
+// environment.plugins.insert('CommonChunkVendor',
+//   new webpack.optimize.CommonsChunkPlugin({
+//     name: 'vendor', // Vendor code
+//     minChunks: (module) => module.context && module.context.indexOf('node_modules') !== -1
+//   }), {
+//     before: 'manifest'
+//   })
 
 // Add an additional plugin of your choosing : ProvidePlugin
 environment.plugins.prepend(

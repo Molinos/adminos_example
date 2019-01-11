@@ -7,12 +7,11 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-
 importAll(require.context('../client/img/'));
 
+import "actiontext"
+import 'jquery';
+import 'adminos/src/js/railsujs.js'
 import '../client/css/main.scss'
-
 import 'bootstrap/dist/js/bootstrap.min.js'
 import '../client/js/clean-blog.min.js'
-
-import "actiontext"

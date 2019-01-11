@@ -8,4 +8,6 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
 
-@import 'clean-blog.min.css'
+@import 'clean-blog.min.css';
+
+@import 'partial/comments';

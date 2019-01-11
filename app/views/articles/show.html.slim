@@ -17,3 +17,17 @@ article
     .row
       .col-lg-8.col-md-10.mx-auto
         == @article.content
+
+  .detailBox
+    .titleBox
+      label
+        | Comments
+    .actionBox
+      ul.commentList
+        - @article.comments.each do |comment|
+          = render comment
+
+      = form_with url: article_comments_path(@article), html: { class: 'form-inline', role: 'form' } do |f|
+        .form-group
+          input.form-control.form-control-lg[name="comment[body]" type="text" placeholder="Your comments"]
+        = f.submit 'Add', class: 'btn btn-primary ml-3'
