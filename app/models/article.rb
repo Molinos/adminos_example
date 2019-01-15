@@ -8,7 +8,8 @@ class Article < ApplicationRecord
   has_rich_text :content
   has_one_attached :cover
 
-  cropped :cover
+  cropped :cover, version: :default, coord_attribute: :cover_coord
+  cropped :cover, version: :mobile, coord_attribute: :cover_mobile_coord
 
   belongs_to :user
 

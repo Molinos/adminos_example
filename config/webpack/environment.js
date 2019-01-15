@@ -1,7 +1,10 @@
-const { environment } = require('@rails/webpacker')
-const customConfig = require('./custom')
+const {
+  environment
+} = require('@rails/webpacker');
+const setupAdminos = require('adminos/webpacker');
 
-// Merge custom config
-environment.config.merge(customConfig)
+setupAdminos(environment);
 
-module.exports = environment
+// Configure your environment as needed here
+
+module.exports = environment;

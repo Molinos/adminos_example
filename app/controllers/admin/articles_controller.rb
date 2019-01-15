@@ -19,6 +19,6 @@ class Admin::ArticlesController < Admin::BaseController
   def strong_params
     params.require(:article).permit(:name, :published, :cover, :cover_coord, :slug,
                                     :meta_description, :meta_title, :title, :publish_at,
-                                    :user_id, :tags, :content)
+                                    :user_id, :content, :cover_mobile_coord, tags: [])
   end
 end
