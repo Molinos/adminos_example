@@ -5,6 +5,8 @@ class Article < ApplicationRecord
   include Adminos::NestedSet::Duplication
   include Adminos::Cropped
 
+  paginates_per 10
+
   has_rich_text :content
   has_one_attached :cover
 

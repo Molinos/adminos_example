@@ -25,5 +25,9 @@ header.masthead[style="background-image: url(#{asset_pack_path('client/img/home-
         hr
 
       .clearfix
-        a.btn.btn-primary.float-right[href="#"]
-          | Older Posts →
+        - unless @articles.first_page?
+          a.btn.btn-primary.float-left[href=root_path(page: @articles.current_page - 1)]
+            |  ← Свежие посты
+        - unless @articles.last_page?
+          a.btn.btn-primary.float-right[href=root_path(page: @articles.current_page + 1)]
+            | Ранние посты →
