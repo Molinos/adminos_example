@@ -39,6 +39,10 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'ffaker'
+gem 'factory_bot_rails'
+gem 'database_cleaner'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -46,9 +50,6 @@ group :development, :test do
   gem 'shoulda-matchers' # from adminos
 #   gem 'shoulda-matchers' # adminos conflict
   gem 'bundler-audit' # from adminos
-  gem 'database_cleaner' # from adminos
-  gem 'factory_bot_rails' # from adminos
-  gem 'faker' # from adminos
   gem 'minitest' # from adminos
   gem 'rspec-rails' # from adminos
 end
