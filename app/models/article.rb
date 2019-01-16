@@ -5,6 +5,9 @@ class Article < ApplicationRecord
   include Adminos::NestedSet::Duplication
   include Adminos::Cropped
 
+  scope :sorted, -> { order(created_at: :desc) }
+  scope :sort_by_publish_at, -> { order(publish_at: :desc) }
+
   paginates_per 10
 
   has_rich_text :content
@@ -24,7 +27,7 @@ class Article < ApplicationRecord
 
   validates :name, presence: true
 
-  scope :sorted, -> { order('created_at DESC') }
+
 
   def reasonable_name
     if self.respond_to?(:translations)
