@@ -34,7 +34,11 @@ html#no-js lang="ru"
           ul.navbar-nav.ml-auto
             li.nav-item
               a.nav-link[href=root_path]
-                | Home
+                | Главная
+            - pages.each do |page|
+              li.nav-item
+                a.nav-link[href=page.absolute_path]
+                  = page.nav_name
     = yield
 
     // Вывод меню Page

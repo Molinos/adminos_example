@@ -3,10 +3,12 @@ class ApplicationController < ActionController::Base
 
   respond_to :html
 
-  before_action :reload_routes, :set_locale, :set_paper_trail_whodunnit, :set_pages
+  before_action :reload_routes, :set_locale, :set_paper_trail_whodunnit
   before_action :check_page_name_locale, unless: -> { controller_path.split('/').first == 'admin' }
   @@routes_version = 0
   @@lock = Mutex.new
+
+  helper_method :pages
 
   protected
 
@@ -56,7 +58,7 @@ class ApplicationController < ActionController::Base
     ApplicationController.descendants.include? Admin::BaseController
   end
 
-  def set_pages
+  def pages
     @pages ||= Page.navigation.sorted
   end
 end

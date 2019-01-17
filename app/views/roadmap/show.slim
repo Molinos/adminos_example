@@ -1,0 +1,31 @@
+header.masthead[style="background-image: url(#{asset_pack_path('client/img/home-bg.jpg')})"]
+  .overlay
+  .container
+    .row
+      .col-lg-8.col-md-10.mx-auto
+        .site-heading
+          h1
+            | Adminos Blog
+          span.subheading
+            | Adminos technical blog
+.container
+  .row
+    .col-lg-8.col-md-10.mx-auto
+      - if @features.blank?
+        .text-center
+          h2 Ой! Кажется мы еще ничего не опубликовали.
+          span.subheading Попробуй зайти позже.
+      - else
+        - @features.each do |feature|
+          .post-preview
+            = link_to feature
+              h2.post-title= feature.name
+          / hr
+
+        .clearfix
+          - unless @features.first_page?
+            a.btn.btn-primary.float-left[href=root_path(page: @features.current_page - 1)]
+              | ← Назад
+          - unless @features.last_page?
+            a.btn.btn-primary.float-right[href=root_path(page: @features.current_page + 1)]
+              | Вперед →

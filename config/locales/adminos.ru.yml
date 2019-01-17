@@ -332,6 +332,7 @@ ru:
   pages:
     behaviors:
       pages: Типовая страница
+      roadmap: Дорожна карта
 
   unauthorized:
     default: Необходимо войти или зарегистрироваться.

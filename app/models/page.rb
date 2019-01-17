@@ -15,7 +15,7 @@ class Page < ApplicationRecord
 
   validates_with LocaleValidator
   BEHAVIORS = [
-                'pages'
+                'pages', 'roadmap'
               ]
 
   # has_paper_trail

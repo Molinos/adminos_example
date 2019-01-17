@@ -75,6 +75,7 @@ Rails.application.routes.draw do
     devise_for :users, skip: :all
 
     root to: 'index#index'
+    resources :features, only: [:show]
     resources :articles do
       resources :comments
     end
