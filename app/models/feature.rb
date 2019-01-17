@@ -5,21 +5,19 @@ class Feature < ApplicationRecord
   include Adminos::NestedSet::PlaceTo
   include Adminos::NestedSet::SafeDestroy
   include Adminos::NestedSet::Duplication
+  scope :sorted, -> { order('lft ASC') }
+
+  validates :name, presence: true
+
+  after_save :update_descendants_states
+
+  has_rich_text :content
+  paginates_per 10
   has_paper_trail
   slugged :recognizable_name
   flag_attrs :published
   acts_as_nested_set
   acts_as_recognizable :recognizable_name
-
-  paginates_per 10
-
-  after_save :update_descendants_states
-
-  validates :name, presence: true
-
-  scope :sorted, -> { order('lft ASC') }
-
-  has_rich_text :content
 
   def reasonable_name
     if self.respond_to?(:translations)
