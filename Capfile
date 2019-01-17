@@ -8,8 +8,9 @@ require 'capistrano/bundler'
 require 'capistrano/rails'
 require 'capistrano/puma'
 require 'capistrano-db-tasks'
-require "capistrano/scm/git"
-require "capistrano/sidekiq"
+require 'capistrano/scm/git'
+require 'capistrano/sidekiq'
+require 'whenever/capistrano'
 
 install_plugin Capistrano::Puma
 install_plugin Capistrano::SCM::Git
