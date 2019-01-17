@@ -10,10 +10,3 @@ set :linked_dirs, fetch(:linked_dirs, []).push(
 
 set :rvm_ruby_version, Pathname(__dir__).join('../.ruby-version').read.chomp
 append :rvm_map_bins, 'puma', 'pumactl', 'sidekiq', 'sidekiqctl'
-
-after 'deploy:publishing', 'deploy:restart'
-namespace :deploy do
-  task :restart do
-    invoke 'unicorn:restart'
-  end
-end
