@@ -67,11 +67,11 @@ group :development do
   gem 'capistrano-bundler', require: false # from adminos
   gem 'capistrano-rails', require: false # from adminos
   gem 'capistrano-rvm', require: false # from adminos
-  gem 'capistrano3-unicorn', require: false # from adminos
   gem 'guard' # from adminos
   gem 'guard-livereload', '~> 2.5', require: false # from adminos
+  gem 'capistrano3-puma'
+  gem 'capistrano-sidekiq'
 end
-
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

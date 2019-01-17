@@ -6,8 +6,13 @@ require 'capistrano/deploy'
 require 'capistrano/rvm'
 require 'capistrano/bundler'
 require 'capistrano/rails'
-require 'capistrano3/unicorn'
+require 'capistrano/puma'
 require 'capistrano-db-tasks'
+require "capistrano/scm/git"
+require "capistrano/sidekiq"
+
+install_plugin Capistrano::Puma
+install_plugin Capistrano::SCM::Git
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
