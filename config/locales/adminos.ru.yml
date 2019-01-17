@@ -232,6 +232,21 @@ ru:
           new_stay_in_place: Применить
           update: Сохранить poll
           update_stay_in_place: Применить
+    features:
+      actions:
+        index:
+          header: Features
+          title: Features
+      labels:
+        actions:
+          create: Добавить feature
+          create_stay_in_place: Применить
+          edit: Сохранить feature
+          edit_stay_in_place: Применить
+          new: Добавить feature
+          new_stay_in_place: Применить
+          update: Сохранить feature
+          update_stay_in_place: Применить
     helps:
       actions:
         index:
