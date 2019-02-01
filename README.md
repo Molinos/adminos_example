@@ -1,24 +1,24 @@
-# README
+# Adminos Example Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example of using gem [adminos](https://github.com/Molinos/adminos).
 
-Things you may want to cover:
 
-* Ruby version
+## Dependencies
+* rvm
+* ruby 2.5.1
+* rails 5.2
+* postgresql 10.x
 
-* System dependencies
+## Get started
 
-* Configuration
+```sh
+bundle install
+rails db:create db:create
+rails db:create db:migrate
+rails db:create db:setup
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+rails s
+./bin/webpack-dev-server
+```
