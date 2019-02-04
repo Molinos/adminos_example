@@ -27,9 +27,10 @@ html#no-js lang="ru"
 
     = csrf_meta_tag
 
-    = javascript_pack_tag 'admin'
 
-    = yield :javascript
 
   body.page class="#{@body_class}"
     = content_for?(:admin_layout) ? yield(:admin_layout) : yield
+
+    = javascript_pack_tag 'admin'
+    = yield :javascript
