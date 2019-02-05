@@ -53,6 +53,9 @@ group :development, :test do
   gem 'bundler-audit' # from adminos
   gem 'minitest' # from adminos
   gem 'rspec-rails' # from adminos
+  gem 'database_cleaner' # from adminos
+  gem 'factory_bot_rails' # from adminos
+  gem 'faker' # from adminos
 end
 
 group :development do
@@ -71,6 +74,7 @@ group :development do
   gem 'guard-livereload', '~> 2.5', require: false # from adminos
   gem 'capistrano3-puma'
   gem 'capistrano-sidekiq'
+  gem 'capistrano-systemd-multiservice', '~> 0.1.0.beta6', require: false # from adminos
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -82,9 +86,6 @@ gem 'role_model' # from adminos
 gem 'webpacker', '~> 3.5' # from adminos
 gem 'actiontext', github: 'rails/actiontext', require: 'action_text', ref: 'cfe4674d3637c746cdb3c2b5131e2de498775529' # from adminos
 gem 'image_processing', '~> 1.2' # for Active Storage variants # from adminos
-group :production, :staging do
-  gem 'unicorn' # from adminos
-end
 gem 'whenever', require: false # from adminos
 gem 'capistrano-db-tasks', require: false # from adminos
 gem 'sanitize' # from adminos
