@@ -11,6 +11,15 @@ class Admin::ProfilesController < Admin::BaseController
     end
   end
 
+  def toggle_two_factor
+    if resource.otp_required_for_login
+      resource.update(otp_required_for_login: false)
+    else
+      resource.update(otp_required_for_login: true, otp_secret: User.generate_otp_secret)
+    end
+    redirect_to action: :edit
+  end
+
   private
 
   def resource

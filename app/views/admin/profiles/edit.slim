@@ -9,6 +9,7 @@
         = f.input :password, hint: 'Оставьте пустым если не хотите изменить'
         = f.input :password_confirmation, hint: 'Повторите пароль'
         = f.input :current_password, hint: 'Введите текущий пароль'
+      = render '2fa', resource: resource
 
   .f
     .f__wrapper
