@@ -296,6 +296,10 @@ ru:
       actions:
         index:
           header: Настройки
+    profile:
+      actions:
+        index:
+          header: Мой профиль
       sets:
         counters: Счётчики
         index: Главная страница
