@@ -39,6 +39,11 @@
                   = link_to t('admin.paper_trail/versions.actions.index.header'), admin_versions_path, class: 'nav__link'
     .sidebar__footer
       .nav
+        = top_menu_item active: 'admin/profiles#' do
+          = link_to edit_admin_profile_path, class: 'nav__link' do
+            span.link.link--settings
+              = t('admin.profile.actions.index.header')
+
         = top_menu_item active: 'admin/settings#' do
           = link_to edit_admin_settings_path, class: 'nav__link' do
             span.link.link--settings

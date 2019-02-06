@@ -32,6 +32,7 @@ Rails.application.routes.draw do
 
       resources :helps, only: :index
       resource  :settings, only: [:edit, :update]
+      resource  :profile, only: [:edit, :update]
 
       resources :users, except: :show do
         collection { post :batch_action }
