@@ -1,9 +1,12 @@
 require 'role_model'
 
 class User < ApplicationRecord
+  devise :two_factor_authenticatable,
+         :otp_secret_encryption_key => ENV['OTP_SECRET_ENCRYPTION_KEY']
+
   include RoleModel
 
-  devise :database_authenticatable, :registerable, :recoverable,
+  devise :registerable, :recoverable,
     :rememberable, :validatable, :omniauthable
 
   # has_many :authentications, dependent: :destroy

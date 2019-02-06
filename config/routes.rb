@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
     # ADMINOS ROUTES START
 
-    devise_for :users, skip: :omniauth_callbacks
+    devise_for :users, skip: :omniauth_callbacks,
+      controllers: { sessions: 'users/sessions'}
+
 
     devise_for :users, skip: [:session, :password, :registration, :confirmation],
       controllers: { omniauth_callbacks: 'authentications' }
@@ -33,6 +35,9 @@ Rails.application.routes.draw do
       resources :helps, only: :index
       resource  :settings, only: [:edit, :update]
       resource  :profile, only: [:edit, :update]
+      resource  :profile, only: [] do
+        member { post :toggle_two_factor }
+      end
 
       resources :users, except: :show do
         collection { post :batch_action }

@@ -75,6 +75,8 @@ group :development do
   gem 'capistrano3-puma'
   gem 'capistrano-sidekiq'
   gem 'capistrano-systemd-multiservice', '~> 0.1.0.beta6', require: false # from adminos
+
+  gem 'dotenv-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -103,3 +105,4 @@ group :lint do
   gem 'rubocop' # from adminos
 end
 gem 'globalize' # from adminos
+gem 'devise-two-factor' # from adminos
