@@ -12,7 +12,7 @@ class Admin::ArticlesController < Admin::BaseController
 
   alias_method :collection_orig, :collection
   def collection
-    @collection ||= collection_orig
+    @collection ||= collection_orig.search_for(params[:query])
       .page(params[:page]).per(settings.per_page)
   end
 

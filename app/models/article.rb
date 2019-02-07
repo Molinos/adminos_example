@@ -27,6 +27,7 @@ class Article < ApplicationRecord
 
   validates :name, presence: true
 
+  scoped_search on: :name
 
 
   def reasonable_name
