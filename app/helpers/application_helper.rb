@@ -1,6 +1,6 @@
 module ApplicationHelper
   def google_authenticator_qrcode(devise_resource)
-    issuer = 'Forcerate'
+    issuer = '' # TODO: issuer name
     label = "#{issuer}:#{devise_resource.email}"
     data = devise_resource.otp_provisioning_uri(label, issuer: issuer)
     escaped_data = Rack::Utils.escape(data)
