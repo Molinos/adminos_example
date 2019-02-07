@@ -5,15 +5,15 @@
   = f.input :published, wrapper: :check
 
 .f__fieldset
-  = f.input :cover, as: :cropp, input_html: { aspect_ratio: '1/5' }
+  = f.input :cover, label: 'Full cover', as: :cropp, input_html: { aspect_ratio: '1/5' }
 .f__fieldset
-  = f.input :cover, as: :cropp, input_html: { coord_attribute: :cover_mobile_coord, version: :mobile, aspect_ratio: '5/2' }
+  = f.input :cover, label: 'Mobile cover', as: :cropp, input_html: { coord_attribute: :cover_mobile_coord, version: :mobile, aspect_ratio: '5/2' }
 
 .f__fieldset
   = f.rich_text_area :content
 
 .f__fieldset
-  = f.input :publish_at
+  = f.input :publish_at, as: :datepicker
   = f.input :tags, as: :select, input_html: { class: 'select2it', multiple: true }
   = f.association :user, label_method: :email, wrapper: :select, input_html: { class: 'select2it' }
 
