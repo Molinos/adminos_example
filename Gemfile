@@ -75,13 +75,15 @@ group :development do
   gem 'capistrano3-puma'
   gem 'capistrano-sidekiq'
   gem 'capistrano-systemd-multiservice', '~> 0.1.0.beta6', require: false # from adminos
+
+  gem 'dotenv-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# gem 'adminos', path: '../../github/adminos/'
-gem 'adminos'
+gem 'adminos', path: '../adminos'
+# gem 'adminos'
 gem 'role_model' # from adminos
 gem 'webpacker', '~> 3.5' # from adminos
 gem 'actiontext', github: 'rails/actiontext', require: 'action_text', ref: 'cfe4674d3637c746cdb3c2b5131e2de498775529' # from adminos
@@ -104,3 +106,4 @@ group :lint do
   gem 'rubocop' # from adminos
 end
 gem 'globalize' # from adminos
+gem 'devise-two-factor' # from adminos
