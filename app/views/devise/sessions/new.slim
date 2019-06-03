@@ -2,20 +2,20 @@
 
 .auth
   .auth__title Adminos
-  .auth__welcome Вход в систему администрирования
+  .auth__welcome Welcome to the demo administration system Use&nbsp;demo&nbsp;email&nbsp;and&nbsp;password: demo@adminos.app&nbsp;/&nbsp;demoapp
 
   = simple_form_for resource, as: resource_name, url: session_path(resource_name), wrapper: :auth, html: { class: 'form auth__form' } do |f|
-    = f.input :email, placeholder: 'Электронная почта'
-    = f.input :password, placeholder: 'Пароль'
+    = f.input :email, placeholder: 'Email'
+    = f.input :password, placeholder: 'Password'
 
     /- if devise_mapping.rememberable?
       = f.input :remember_me, as: :boolean, inline_label: t('admin.users.labels.form.remember_me'), label: false
 
     .form__submit.centered
-      = f.submit 'Войти', class: 'button button--rounded'
+      = f.submit 'Enter', class: 'button button--rounded'
 
   /.auth__help
-    a href="#" Напомнить пароль
+    a href="#" Remind password
 
   - if flash.present?
     .auth__message
