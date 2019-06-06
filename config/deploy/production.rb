@@ -10,8 +10,6 @@ set :nginx_ssl_certificate, "/ssl/adminos.app-0001/fullchain.pem"
 set :nginx_ssl_certificate_key, "/ssl/adminos.app-0001/privkey.pem"
 set :nginx_ssl_dhparam, "/ssl/config/ssl-dhparams.pem"
 
-append :linked_files
-
 # CentOS
 set :nginx_sites_available_path, "#{fetch(:deploy_to)}/shared"
 set :nginx_sites_enabled_path, '/etc/nginx/conf.d'
