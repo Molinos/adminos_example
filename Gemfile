@@ -101,6 +101,7 @@ gem 'omniauth-twitter' # from adminos
 gem 'omniauth-vkontakte' # from adminos
 gem 'axlsx', git: 'https://github.com/randym/axlsx.git' # from adminos
 gem 'spreadsheet_architect' # from adminos
+gem 'bootstrap-datepicker-rails'
 group :lint do
   gem 'rubocop' # from adminos
 end

@@ -107,6 +107,11 @@ ru:
         item_type: Тип
         event: Событие
         whodunnit: Юзер
+      article:
+        tags: Теги
+        user: Автор
+        title: Подзаголовок
+        publish_at: Дата публикации
 
   social:
     log_in: Войти через социальные сети
