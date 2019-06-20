@@ -105,5 +105,4 @@ gem 'spreadsheet_architect' # from adminos
 group :lint do
   gem 'rubocop-rails' # from adminos
 end
-gem 'globalize' # from adminos
 gem 'devise-two-factor' # from adminos
