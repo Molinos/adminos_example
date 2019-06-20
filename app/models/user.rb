@@ -5,6 +5,10 @@ class User < ApplicationRecord
          :otp_secret_encryption_key => ENV['OTP_SECRET_ENCRYPTION_KEY']
 
   include RoleModel
+  include Adminos::Searchable
+
+  searchable
+
 
   devise :registerable, :recoverable,
     :rememberable, :validatable, :omniauthable
