@@ -43,6 +43,7 @@ gem 'ffaker'
 gem 'factory_bot_rails'
 gem 'database_cleaner'
 gem 'sidekiq'
+gem 'pg_search'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -81,8 +82,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'adminos', path: '../adminos'
+gem 'mobility'
+gem 'adminos', github: 'Molinos/adminos'
 # gem 'adminos'
 gem 'role_model' # from adminos
 gem 'webpacker', '~> 3.5' # from adminos
@@ -102,7 +103,7 @@ gem 'omniauth-vkontakte' # from adminos
 gem 'axlsx', git: 'https://github.com/randym/axlsx.git' # from adminos
 gem 'spreadsheet_architect' # from adminos
 group :lint do
-  gem 'rubocop' # from adminos
+  gem 'rubocop-rails' # from adminos
 end
 gem 'globalize' # from adminos
 gem 'devise-two-factor' # from adminos
