@@ -1,6 +1,4 @@
 .f__fieldset
-  = f.input :name
-  = f.input :title
   = f.input :slug
   = f.input :published, wrapper: :check
 
@@ -8,9 +6,6 @@
   = f.input :cover, as: :cropp, input_html: { aspect_ratio: '1/5' }
 .f__fieldset
   = f.input :cover, as: :cropp, input_html: { coord_attribute: :cover_mobile_coord, version: :mobile, aspect_ratio: '5/2' }
-
-.f__fieldset
-  = f.rich_text_area :content
 
 .f__fieldset
   = f.input :publish_at

@@ -4,6 +4,7 @@ class Article < ApplicationRecord
   include Adminos::Recognizable
   include Adminos::NestedSet::Duplication
   include Adminos::Cropped
+  extend Mobility
 
   scope :sorted, -> { order(created_at: :desc) }
   scope :sort_by_publish_at, -> { order(publish_at: :desc) }
@@ -29,6 +30,7 @@ class Article < ApplicationRecord
 
   scoped_search on: :name
 
+  translates :name, :title, locale_accessors: true, ransack: true
 
   def reasonable_name
     if self.respond_to?(:translations)
