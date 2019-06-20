@@ -22,6 +22,7 @@ module DemoAdminos
     config.i18n.default_locale = :ru
     config.time_zone = 'Moscow'
     config.i18n.available_locales = [:ru]
+    config.i18n.fallbacks = true
     config.generators { |g| g.test_framework :rspec }
     config.action_mailer.default_url_options = { host: 'molinos.ru' }
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
