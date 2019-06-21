@@ -1,3 +1,12 @@
 .nested-fields
-  = f.input :option
-  = link_to_remove_association "Remove option", f, class: "list__remove"
+  ul.nav.nav-tabs.with-togglable-navigation
+    - I18n.available_locales.each_with_index do |locale, i|
+      li.nav-item
+        a.nav-link href="#pill_#{locale}" class=('active' if locale == :en) data-toggle="pill"
+          = locale
+
+  .tab-content
+    - I18n.available_locales.each_with_index do |locale, i|
+      .tab-pane id="pill_#{locale}" class=('active' if locale == :en)
+        = f.input :option, locale: locale
+  = link_to_remove_association t('labels.admin.destroy'), f, class: "list__remove"

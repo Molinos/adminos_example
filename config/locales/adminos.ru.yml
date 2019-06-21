@@ -287,6 +287,14 @@ ru:
           new_stay_in_place: Применить
           update: Сохранить опрос
           update_stay_in_place: Применить
+    poll_options:
+      actions:
+        index:
+          title: Варианты
+      labels:
+        actions:
+          create: Добавить вариант
+          new: Добавить вариант
     features:
       actions:
         index:

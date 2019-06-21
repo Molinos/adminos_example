@@ -151,6 +151,14 @@ en:
           edit: Save poll
           new: Add poll
           update: Save poll
+    poll_options:
+      actions:
+        index:
+          title: Options
+      labels:
+        actions:
+          create: Add option
+          new: Add option
     articles:
       actions:
         index:
