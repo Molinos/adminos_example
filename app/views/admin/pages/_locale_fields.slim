@@ -1,6 +1,7 @@
 .f__fieldset
   = f.input :name, locale: locale
   = f.input :nav_name, locale: locale
+  = f.rich_text_area "content_#{locale}".to_sym
 
   / = f.input :body
   /.kaya-please
