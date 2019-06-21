@@ -5,6 +5,8 @@ class Feature < ApplicationRecord
   include Adminos::NestedSet::PlaceTo
   include Adminos::NestedSet::SafeDestroy
   include Adminos::NestedSet::Duplication
+  extend Mobility
+
   scope :sorted, -> { order('lft ASC') }
 
   validates :name, presence: true
@@ -18,6 +20,7 @@ class Feature < ApplicationRecord
   flag_attrs :published
   acts_as_nested_set
   acts_as_recognizable :recognizable_name
+  translates :name, locale_accessors: true, ransack: true
 
   def reasonable_name
     if self.respond_to?(:translations)
