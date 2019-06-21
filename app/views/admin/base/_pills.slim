@@ -6,10 +6,10 @@
 ul.nav.nav-tabs.with-togglable-navigation
   - I18n.available_locales.each_with_index do |locale, i|
     li.nav-item
-      a.nav-link href="#pill_#{locale}" class=('active' if locale == :ru) data-toggle="pill"
+      a.nav-link href="#pill_#{locale}" class=('active' if locale == :en) data-toggle="pill"
         = locale
 
 .tab-content
   - I18n.available_locales.each_with_index do |locale, i|
-    .tab-pane id="pill_#{locale}" class=('active' if locale == :ru)
+    .tab-pane id="pill_#{locale}" class=('active' if locale == :en)
       = render 'locale_fields', locale: locale, f: f
