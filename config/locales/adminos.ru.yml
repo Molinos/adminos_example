@@ -260,47 +260,47 @@ ru:
     articles:
       actions:
         index:
-          header: Articles
-          title: Articles
+          header: Статьи
+          title: Статьи
       labels:
         actions:
-          create: Добавить article
+          create: Добавить статью
           create_stay_in_place: Применить
-          edit: Сохранить article
+          edit: Сохранить статью
           edit_stay_in_place: Применить
-          new: Добавить article
+          new: Добавить статью
           new_stay_in_place: Применить
-          update: Сохранить article
+          update: Сохранить статью
           update_stay_in_place: Применить
     polls:
       actions:
         index:
-          header: Polls
-          title: Polls
+          header: Опрос
+          title: Опрос
       labels:
         actions:
-          create: Добавить poll
+          create: Добавить опрос
           create_stay_in_place: Применить
-          edit: Сохранить poll
+          edit: Сохранить опрос
           edit_stay_in_place: Применить
-          new: Добавить poll
+          new: Добавить опрос
           new_stay_in_place: Применить
-          update: Сохранить poll
+          update: Сохранить опрос
           update_stay_in_place: Применить
     features:
       actions:
         index:
-          header: Features
-          title: Features
+          header: Фичи
+          title: Фичи
       labels:
         actions:
-          create: Добавить feature
+          create: Добавить фичу
           create_stay_in_place: Применить
-          edit: Сохранить feature
+          edit: Сохранить фичу
           edit_stay_in_place: Применить
-          new: Добавить feature
+          new: Добавить фичу
           new_stay_in_place: Применить
-          update: Сохранить feature
+          update: Сохранить фичу
           update_stay_in_place: Применить
     helps:
       actions:
@@ -391,7 +391,7 @@ ru:
   pages:
     behaviors:
       pages: Типовая страница
-      roadmap: Дорожна карта
+      roadmap: Дорожная карта
 
   unauthorized:
     default: Необходимо войти или зарегистрироваться.
