@@ -15,10 +15,4 @@ class Admin::ArticlesController < Admin::BaseController
     @collection ||= collection_orig.search_for(params[:query])
       .page(params[:page]).per(settings.per_page)
   end
-
-  def strong_params
-    params.require(:article).permit(:name, :published, :cover, :cover_coord, :slug,
-                                    :meta_description, :meta_title, :title, :publish_at,
-                                    :user_id, :content, :cover_mobile_coord, tags: [])
-  end
 end

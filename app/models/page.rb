@@ -5,13 +5,12 @@ class Page < ApplicationRecord
   include Adminos::NestedSet::Duplication
   include Adminos::Slugged
   include Adminos::FlagAttrs
+  extend Mobility
 
   has_rich_text :content
 
   MAX_DEPTH = 3
-  translates :name, :nav_name, :body, :meta_description, :meta_title
-
-  accepts_nested_attributes_for :translations
+  translates :name, :nav_name, :body, locale_accessors: true, ransack: true
 
   validates_with LocaleValidator
   BEHAVIORS = [

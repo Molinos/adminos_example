@@ -114,6 +114,10 @@ en:
           edit: Save settings
           update: Save settings
         contact_email: E-mail
+    profile:
+      actions:
+        index:
+          header: Profile
     pages:
       actions:
         index:
@@ -125,7 +129,47 @@ en:
           edit: Save page
           new: Add page
           update: Save page
-
+    features:
+      actions:
+        index:
+          header: Features
+          title: Features
+      labels:
+        actions:
+          create: Add feature
+          edit: Save feature
+          new: Add feature
+          update: Save feature
+    polls:
+      actions:
+        index:
+          header: Polls
+          title: Polls
+      labels:
+        actions:
+          create: Add poll
+          edit: Save poll
+          new: Add poll
+          update: Save poll
+    poll_options:
+      actions:
+        index:
+          title: Options
+      labels:
+        actions:
+          create: Add option
+          new: Add option
+    articles:
+      actions:
+        index:
+          header: Article
+          title: Article
+      labels:
+        actions:
+          create: Add article
+          edit: Save article
+          new: Add article
+          update: Save article
   labels:
     application:
       admin: Dashboard
@@ -137,6 +181,7 @@ en:
       destroy: Delete
       edit: Edit
       show: Show modifications
+      search: Search
       go_to_root: Home
       info: Information
       other: Other
@@ -162,3 +207,21 @@ en:
 
   unauthorized:
     default: You must login or register.
+
+  confirmations:
+    destroy:
+      one: Are you sure want to delete this object?
+      many: Are you sure want to delete selected objects?
+
+  pages:
+    behaviors:
+      pages: Typical page
+      roadmap: Roadmap
+
+  layouts:
+    application:
+      header: Главная
+      title: Molinos.Ru
+    admin:
+      header: &layouts_admin_header Панель управления
+      title: &layouts_admin_title Панель управления

@@ -17,6 +17,6 @@ class Admin::PollsController < Admin::BaseController
   end
 
   def strong_params
-    params.require(:poll).permit(:name, :published, poll_options_attributes: [:id ,:option, :_destroy])
+    params.require(:poll).permit(:name_ru, :name_en, :published, poll_options_attributes: [:id ,:option_ru, :option_en, :_destroy])
   end
 end

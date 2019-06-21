@@ -3,6 +3,7 @@ class Poll < ApplicationRecord
   include Adminos::FlagAttrs
   include Adminos::Recognizable
   include Adminos::NestedSet::Duplication
+  extend Mobility
 
   scope :sorted, -> { order('created_at DESC') }
   validates :name, presence: true
@@ -15,6 +16,8 @@ class Poll < ApplicationRecord
   slugged :recognizable_name
   flag_attrs :published
   acts_as_recognizable :recognizable_name
+
+  translates :name, locale_accessors: true, ransack: true
 
   def reasonable_name
     if self.respond_to?(:translations)

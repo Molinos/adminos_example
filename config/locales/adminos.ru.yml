@@ -18,6 +18,60 @@ ru:
       primary: '%d.%m.%Y'
       short: '%e %B %Y'
 
+  date:
+    abbr_day_names:
+    - Вс
+    - Пн
+    - Вт
+    - Ср
+    - Чт
+    - Пт
+    - Сб
+    abbr_month_names:
+    - 
+    - янв.
+    - февр.
+    - марта
+    - апр.
+    - мая
+    - июня
+    - июля
+    - авг.
+    - сент.
+    - окт.
+    - нояб.
+    - дек.
+    day_names:
+    - воскресенье
+    - понедельник
+    - вторник
+    - среда
+    - четверг
+    - пятница
+    - суббота
+    formats:
+      default: "%d.%m.%Y"
+      long: "%-d %B %Y"
+      short: "%-d %b"
+    month_names:
+    - 
+    - января
+    - февраля
+    - марта
+    - апреля
+    - мая
+    - июня
+    - июля
+    - августа
+    - сентября
+    - октября
+    - ноября
+    - декабря
+    order:
+    - :day
+    - :month
+    - :year
+
   number:
     currency:
       format:
@@ -206,47 +260,55 @@ ru:
     articles:
       actions:
         index:
-          header: Articles
-          title: Articles
+          header: Статьи
+          title: Статьи
       labels:
         actions:
-          create: Добавить article
+          create: Добавить статью
           create_stay_in_place: Применить
-          edit: Сохранить article
+          edit: Сохранить статью
           edit_stay_in_place: Применить
-          new: Добавить article
+          new: Добавить статью
           new_stay_in_place: Применить
-          update: Сохранить article
+          update: Сохранить статью
           update_stay_in_place: Применить
     polls:
       actions:
         index:
-          header: Polls
-          title: Polls
+          header: Опрос
+          title: Опрос
       labels:
         actions:
-          create: Добавить poll
+          create: Добавить опрос
           create_stay_in_place: Применить
-          edit: Сохранить poll
+          edit: Сохранить опрос
           edit_stay_in_place: Применить
-          new: Добавить poll
+          new: Добавить опрос
           new_stay_in_place: Применить
-          update: Сохранить poll
+          update: Сохранить опрос
           update_stay_in_place: Применить
+    poll_options:
+      actions:
+        index:
+          title: Варианты
+      labels:
+        actions:
+          create: Добавить вариант
+          new: Добавить вариант
     features:
       actions:
         index:
-          header: Features
-          title: Features
+          header: Фичи
+          title: Фичи
       labels:
         actions:
-          create: Добавить feature
+          create: Добавить фичу
           create_stay_in_place: Применить
-          edit: Сохранить feature
+          edit: Сохранить фичу
           edit_stay_in_place: Применить
-          new: Добавить feature
+          new: Добавить фичу
           new_stay_in_place: Применить
-          update: Сохранить feature
+          update: Сохранить фичу
           update_stay_in_place: Применить
     helps:
       actions:
@@ -337,7 +399,7 @@ ru:
   pages:
     behaviors:
       pages: Типовая страница
-      roadmap: Дорожна карта
+      roadmap: Дорожная карта
 
   unauthorized:
     default: Необходимо войти или зарегистрироваться.
