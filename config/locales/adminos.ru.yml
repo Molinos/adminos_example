@@ -161,7 +161,12 @@ ru:
         item_type: Тип
         event: Событие
         whodunnit: Юзер
-
+      article:
+        cover: Изображение
+        publish_at: Дата публикации
+        user: Пользователь
+        tags: Теги
+        comments: Комментарии
   social:
     log_in: Войти через социальные сети
     already_bound: Этот профиль социальной сети уже был привязан
