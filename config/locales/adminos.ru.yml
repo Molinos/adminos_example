@@ -403,3 +403,8 @@ ru:
 
   unauthorized:
     default: Необходимо войти или зарегистрироваться.
+  versions:
+    save_table: Сохранить таблицу
+  authentification:
+    2fa_switch_on: Включить 2FA
+    2fa_switch_off: Отключить 2FA

@@ -1,4 +1,19 @@
 en:
+  time:
+    formats:
+      admin: '%e %B %Y, %H:%M'
+      announcement: '%e %B %Y'
+      announcement_index_page: '%d.%m.%Y'
+      announcement_slug: '%Y-%m-%d %H:%M'
+      event: '%d %B'
+      event_day: '%d'
+      event_year: '%d %B %Y'
+      event_full: '%d %B %Y, %A'
+      feedback_request: '%e %B %Y %H:%M'
+      feedback_request_admin_email_subject: '%e %B %Y %H:%M'
+      feedback_request_manageable: '%e %B %Y %H:%M'
+      primary: '%d.%m.%Y'
+      short: '%e %B %Y'
   attributes:
     name: Name
     published: Published
@@ -225,3 +240,8 @@ en:
     admin:
       header: &layouts_admin_header Панель управления
       title: &layouts_admin_title Панель управления
+  versions:
+    save_table: Save table
+  authentification:
+    2fa_switch_on: 2FA switch on
+    2fa_switch_off: 2FA switch off
