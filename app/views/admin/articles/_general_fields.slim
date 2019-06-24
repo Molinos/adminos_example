@@ -3,7 +3,10 @@
   = f.input :published, wrapper: :check
 
 .f__fieldset
-  = f.input :cover, as: :cropp, input_html: { coord_attribute: :cover_mobile_coord, version: :mobile, aspect_ratio: '5/2' }
+  - if resource.cover.attached? && resource.cover.persisted?
+    = f.input :cover, as: :cropp, input_html: { coord_attribute: :cover_mobile_coord, version: :mobile, aspect_ratio: '5/2' }
+  - else
+    = f.input :cover
 
 .f__fieldset
   = f.input :publish_at
