@@ -107,3 +107,4 @@ group :lint do
   gem 'rubocop-rails' # from adminos
 end
 gem 'devise-two-factor' # from adminos
+gem 'inline_svg'
