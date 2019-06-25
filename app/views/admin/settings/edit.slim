@@ -10,6 +10,9 @@
         = f.input :email_header_from
         = f.input :per_page, input_html: {class: 'input-mini'}
         = f.input :copyright
+        = f.input :twitter, hint: 'https://twitter.com/Molinos_Ru'
+        = f.input :facebook, hint: 'https://www.facebook.com/molinos.ru'
+        = f.input :github, hint: 'https://github.com/Molinos'
       .f__fieldset
         .f__legend= I18n.t 'admin.settings.sets.index'
         = f.input :index_meta_title

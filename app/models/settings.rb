@@ -2,6 +2,9 @@ class Settings < ApplicationRecord
   before_validation :sanitize
 
   validates :company_name, :email, :email_header_from, :per_page, presence: true
+  validates :twitter, presence: true, format: { with: /\Ahttps:\/\/twitter.com\// }
+  validates :facebook, presence: true, format: { with: /\Ahttps:\/\/www.facebook.com\// }
+  validates :github, presence: true, format: { with: /\Ahttps:\/\/github.com\// }
   validate :check_email_header_from
 
   def self.get
