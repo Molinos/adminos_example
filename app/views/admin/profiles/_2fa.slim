@@ -15,10 +15,10 @@
             = google_authenticator_qrcode(resource)
         .f-field
           .f-field__container
-            = link_to "Отключить 2FA", toggle_two_factor_admin_profile_path, method: :post, class: 'btn btn btn-primary'
+            = link_to t('authentification.2fa_switch_off'), toggle_two_factor_admin_profile_path, method: :post, class: 'btn btn btn-primary'
   - else
     .f
       .f__wrapper
         .f-field
           .f-field__container
-            = link_to "Включить 2FA", toggle_two_factor_admin_profile_path, method: :post, class: 'btn btn btn-primary'
+            = link_to t('authentification.2fa_switch_on'), toggle_two_factor_admin_profile_path, method: :post, class: 'btn btn btn-primary'
