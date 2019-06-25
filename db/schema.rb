@@ -98,6 +98,20 @@ ActiveRecord::Schema.define(version: 2019_06_21_084315) do
     t.index ["rgt"], name: "index_features_on_rgt"
   end
 
+  create_table "page_translations", force: :cascade do |t|
+    t.integer "page_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "nav_name"
+    t.text "body"
+    t.text "meta_description"
+    t.string "meta_title"
+    t.index ["locale"], name: "index_page_translations_on_locale"
+    t.index ["page_id"], name: "index_page_translations_on_page_id"
+  end
+
   create_table "pages", force: :cascade do |t|
     t.string "behavior", default: "pages", null: false
     t.integer "parent_id"

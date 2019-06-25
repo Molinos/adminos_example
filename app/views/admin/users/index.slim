@@ -14,6 +14,9 @@
         thead
           tr
             th= admin_sortable_column :email, resource_class.human_attribute_name(:email)
+              i.icon-more-arrow
+                  = inline_svg('nav-arrow-blue.svg')
+
             th= resource_class.human_attribute_name(:roles)
             th
             th
@@ -31,3 +34,9 @@
       = list
   - else
     = list
+
+  p
+  = link_to 'Сохранить таблицу',
+        admin_users_path(format: :xlsx),
+        target: '_blank',
+        class: 'btn btn-primary btn-small button--top'
