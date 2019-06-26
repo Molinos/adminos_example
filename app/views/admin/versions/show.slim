@@ -1,10 +1,10 @@
 - resource_title
 - breadcrumbs resource_name
+- content_for :topbar_button do
+  .actions__item
+    = link_to 'Назад', admin_versions_path, class: 'actions__link actions__link--back'
 
 = resource_header
-
-/ - collection_title
-/ = collection_header
 
 .table-list
   table.table.table-hover.table-sm
