@@ -9,13 +9,15 @@
 
   - list = capture do
     = pagination
+
     .table-list
       table.table.table-hover.table-sm
         thead
           tr
-            th= admin_sortable_column :email, resource_class.human_attribute_name(:email)
+            th
+              = admin_sortable_column :email, resource_class.human_attribute_name(:email)
               i.icon-more-arrow
-                  = inline_svg('nav-arrow-blue.svg')
+                = inline_svg('nav-arrow-blue.svg')
 
             th= resource_class.human_attribute_name(:roles)
             th
