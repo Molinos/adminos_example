@@ -14,7 +14,7 @@
   .table-list
     table.table.table-hover.table-sm
       th.table-header_sort colspan=3
-        = admin_sortable_column :date, resource_class.human_attribute_name(:by_creation_date)
+        = admin_sortable_column :created_at, resource_class.human_attribute_name(:created_at)
         i.icon-more-arrow
           = inline_svg('nav-arrow-blue.svg')
 
