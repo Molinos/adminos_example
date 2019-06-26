@@ -14,5 +14,6 @@ class Admin::ArticlesController < Admin::BaseController
   def collection
     @collection ||= collection_orig.search_for(params[:query])
       .page(params[:page]).per(settings.per_page)
+      .order("#{params[:order_by]} #{params[:direction]}")
   end
 end
