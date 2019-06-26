@@ -4,7 +4,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
     "@rails/webpacker": "3.5",
-    "actiontext": "https://github.com/rails/actiontext#cfe4674d3637c746cdb3c2b5131e2de498775529",
+    "actiontext": "https://github.com/kobaltz/actiontext",
     "adminos": "../adminos-assets/",
     "resolve-url-loader": "^3.0.0"
   },
