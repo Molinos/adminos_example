@@ -17,6 +17,11 @@ article
     .row
       .col-lg-8.col-md-10.mx-auto
         == @article.content
+  - if @article.tags
+    .detailBox
+      .titleBox
+        label
+          = @article.tags
 
   .detailBox
     .titleBox
