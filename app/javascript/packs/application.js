@@ -9,7 +9,6 @@
 
 importAll(require.context('../client/img/'));
 
-// import "actiontext"
 import 'jquery';
 import 'adminos/src/js/railsujs.js'
 import '../client/css/main.scss'

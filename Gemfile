@@ -85,7 +85,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'mobility'
 gem 'mobility-ransack', '~> 0.2.2'
 gem 'adminos', github: 'Molinos/adminos'
-# gem 'adminos'
 gem 'role_model' # from adminos
 gem 'webpacker', '~> 3.5' # from adminos
 gem 'actiontext', github: 'rails/actiontext', require: 'action_text', ref: 'cfe4674d3637c746cdb3c2b5131e2de498775529' # from adminos
