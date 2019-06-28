@@ -75,6 +75,13 @@ acorn@^5.0.0:
     activestorage ">=5.2.0"
     trix ">=1.0.0"
 
+"actiontext@https://github.com/kobaltz/actiontext":
+  version "0.1.0"
+  resolved "https://github.com/kobaltz/actiontext#ef59c4ba99d1b7614dd47f5a294eef553224db88"
+  dependencies:
+    activestorage ">=5.2.0"
+    trix ">=1.0.0"
+
 activestorage@>=5.2.0:
   version "5.2.3"
   resolved "https://registry.yarnpkg.com/activestorage/-/activestorage-5.2.3.tgz#04df0a194d15f7a04abbba313f584fbea2c5a66f"
