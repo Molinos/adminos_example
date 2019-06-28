@@ -17,3 +17,16 @@ set :nginx_sites_enabled_path, '/etc/nginx/conf.d'
 # Ubuntu
 # set :nginx_sites_available_path, "/etc/nginx/sites-available"
 # set :nginx_sites_enabled_path, "/etc/nginx/sites-enabled"
+
+namespace :deploy do
+  desc 'Update crontab with whenever'
+  task :update_cron do
+    on roles(:app) do
+      within current_path do
+        execute :bundle, :exec, "whenever --update-crontab #{fetch(:application)}"
+      end
+    end
+  end
+
+  after :finishing, 'deploy:update_cron'
+end

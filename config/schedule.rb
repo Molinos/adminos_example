@@ -1,18 +1,7 @@
-# Use this file to easily define all of your cron jobs.
-#
-# It's helpful, but not entirely necessary to understand cron before proceeding.
-# http://en.wikipedia.org/wiki/Cron
-
-# Example:
-#
-# set :output, "/path/to/my/cron_log.log"
-#
-every 1.hours do
-  rake "db:seed"
+every 1.day, at: '4:00' do
+  command 'rm -rf /home/app/demo_adminos/current/storage'
+  command 'cp -r /home/app/backup/storage /home/app/demo_adminos/current/storage'
+  # command 'pg_dump -U app_dbu -d app_production > /home/app/backup/default.sql'
+  command 'psql -h localhost postgres postgres -f /home/app/backup/query.psql'
+  command 'psql -U app_dbu -d app_production < /home/app/backup/default.sql'
 end
-#
-# every 4.days do
-#   runner "AnotherModel.prune_old_records"
-# end
-
-# Learn more: http://github.com/javan/whenever
