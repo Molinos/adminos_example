@@ -5,7 +5,7 @@
     "@fortawesome/fontawesome-free": "^5.6.3",
     "@rails/webpacker": "3.5",
     "actiontext": "https://github.com/kobaltz/actiontext",
-    "adminos": "../adminos-assets/",
+    "adminos": "Molinos/adminos-assets/",
     "resolve-url-loader": "^3.0.0"
   },
   "devDependencies": {
