@@ -30,6 +30,7 @@ class Article < ApplicationRecord
   acts_as_recognizable :recognizable_name
 
   validates :name, presence: true
+  validates :publish_at, presence: { if: :published }
 
   scoped_search on: :name
 

@@ -6,7 +6,7 @@
   = f.input :cover, as: :cropp, input_html: { coord_attribute: :cover_mobile_coord, version: :mobile, aspect_ratio: '5/2' }
 
 .f__fieldset
-  = f.input :publish_at
+  = f.input :publish_at, as: :datepicker
   = f.input :tags
   = f.association :user, label_method: :email, wrapper: :select, input_html: { class: 'select2it' }
 
