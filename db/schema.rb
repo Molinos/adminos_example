@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_06_120551) do
+ActiveRecord::Schema.define(version: 2019_06_21_084315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,12 +47,12 @@ ActiveRecord::Schema.define(version: 2019_02_06_120551) do
   end
 
   create_table "articles", force: :cascade do |t|
-    t.string "name"
+    t.jsonb "name"
     t.boolean "published", default: true, null: false
     t.string "slug"
     t.text "meta_description"
     t.string "meta_title"
-    t.string "title"
+    t.jsonb "title"
     t.date "publish_at"
     t.text "tags"
     t.bigint "user_id"
@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2019_02_06_120551) do
   end
 
   create_table "features", force: :cascade do |t|
-    t.string "name"
+    t.jsonb "name"
     t.boolean "published", default: true, null: false
     t.string "slug"
     t.text "meta_description"
@@ -98,20 +98,6 @@ ActiveRecord::Schema.define(version: 2019_02_06_120551) do
     t.index ["rgt"], name: "index_features_on_rgt"
   end
 
-  create_table "page_translations", force: :cascade do |t|
-    t.integer "page_id", null: false
-    t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-    t.string "nav_name"
-    t.text "body"
-    t.text "meta_description"
-    t.string "meta_title"
-    t.index ["locale"], name: "index_page_translations_on_locale"
-    t.index ["page_id"], name: "index_page_translations_on_page_id"
-  end
-
   create_table "pages", force: :cascade do |t|
     t.string "behavior", default: "pages", null: false
     t.integer "parent_id"
@@ -122,9 +108,9 @@ ActiveRecord::Schema.define(version: 2019_02_06_120551) do
     t.string "path"
     t.boolean "nav_published", default: false, null: false
     t.boolean "published", default: false, null: false
-    t.string "name"
-    t.string "nav_name"
-    t.text "body"
+    t.jsonb "name"
+    t.jsonb "nav_name"
+    t.jsonb "body"
     t.text "meta_description"
     t.string "meta_title"
     t.datetime "created_at", null: false
@@ -134,7 +120,7 @@ ActiveRecord::Schema.define(version: 2019_02_06_120551) do
   end
 
   create_table "poll_options", force: :cascade do |t|
-    t.string "option"
+    t.jsonb "option"
     t.bigint "poll_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -142,7 +128,7 @@ ActiveRecord::Schema.define(version: 2019_02_06_120551) do
   end
 
   create_table "polls", force: :cascade do |t|
-    t.string "name"
+    t.jsonb "name"
     t.boolean "published", default: true, null: false
     t.string "slug"
     t.datetime "created_at", null: false

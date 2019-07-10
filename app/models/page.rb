@@ -5,13 +5,14 @@ class Page < ApplicationRecord
   include Adminos::NestedSet::Duplication
   include Adminos::Slugged
   include Adminos::FlagAttrs
+  extend Mobility
 
-  has_rich_text :content
+  I18n.available_locales.each do |locale|
+    has_rich_text "content_#{locale}".to_sym
+  end
 
   MAX_DEPTH = 3
-  translates :name, :nav_name, :body, :meta_description, :meta_title
-
-  accepts_nested_attributes_for :translations
+  translates :name, :nav_name, :body, locale_accessors: true, ransack: true
 
   validates_with LocaleValidator
   BEHAVIORS = [
@@ -37,6 +38,10 @@ class Page < ApplicationRecord
   scope :navigation_top, -> { navigation.where(depth: 0).sorted }
   scope :reverse_sorted, -> { order('lft DESC') }
   scope :with_behavior, -> { proc { |b| where(behavior: b.to_s) } }
+
+  def content
+    send("content_#{I18n.locale}")
+  end
 
   def reasonable_name
     if self.respond_to?(:translations)

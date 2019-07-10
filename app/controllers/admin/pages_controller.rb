@@ -3,8 +3,9 @@ class Admin::PagesController < Admin::BaseController
 
   resource(Page,
             filter_by_locale: true,
-          location: proc { params[:stay_in_place] ?
+            location: proc { params[:stay_in_place] ?
                           edit_polymorphic_path([:admin, resource]) :
                           polymorphic_path([:admin, resource.class]) },
-          collection_scope: [:sorted])
+            filter_by_locale: true,
+            collection_scope: [:sorted])
 end

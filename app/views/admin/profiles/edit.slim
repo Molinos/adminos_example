@@ -1,14 +1,14 @@
-- title 'Профиль'
-= resource_header 'Профиль'
+- title t('admin.profile.actions.index.header')
+= resource_header t('admin.profile.actions.index.header')
 
 = simple_form_for [:admin, resource], url: admin_profile_path, wrapper: :admin, html: { method: :put } do |f|
   .f
     .f__wrapper
       .f__fieldset
         = f.input :email
-        = f.input :password, hint: 'Оставьте пустым если не хотите изменить'
-        = f.input :password_confirmation, hint: 'Повторите пароль'
-        = f.input :current_password, hint: 'Введите текущий пароль'
+        = f.input :password, hint: t('admin.profile.labels.form.do_not_change_password')
+        = f.input :password_confirmation, hint: t('admin.profile.labels.form.repeat_password')
+        = f.input :current_password, hint: t('admin.profile.labels.form.current_password')
       = render '2fa', resource: resource
 
   .f

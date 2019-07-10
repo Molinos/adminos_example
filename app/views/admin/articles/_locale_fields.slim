@@ -1,0 +1,4 @@
+.f__fieldset
+  = f.input :name, locale: locale
+  = f.input :title, locale: locale
+  = f.rich_text_area "content_#{locale}".to_sym

@@ -1,5 +1,8 @@
 - resource_title
 - breadcrumbs resource_name
+- content_for :topbar_button do
+  .actions__item
+    = link_to t('labels.admin.back'), admin_versions_path, class: 'actions__link actions__link--back'
 
 = resource_header
 
@@ -7,9 +10,9 @@
   table.table.table-hover.table-sm
     thead
       tr
-        th Поле
-        th Старое значение
-        th Новое значение
+        th= I18n.t('admin.paper_trail/versions.labels.field')
+        th= I18n.t('admin.paper_trail/versions.labels.old_value')
+        th= I18n.t('admin.paper_trail/versions.labels.new_value')
     tbody
       - resource.changeset.each do |field, change|
         tr
