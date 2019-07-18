@@ -21,6 +21,7 @@ class Admin::SettingsController < Admin::BaseController
   def strong_params
     params.require(:settings).permit :email, :email_header_from, :per_page,
       :copyright, :index_meta_title, :index_meta_description, :company_name,
-      :contact_email, :seo_google_analytics, :seo_yandex_metrika
+      :contact_email, :seo_google_analytics, :seo_yandex_metrika,
+      :twitter, :facebook, :github
   end
 end

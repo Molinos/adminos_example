@@ -44,6 +44,7 @@ html#no-js lang="ru"
     // Вывод меню Page
     / = nested_li @pages do |page|
       = link_to page.name, page.absolute_path
+    - settings = Settings.get
     hr
     footer
       .container
@@ -51,22 +52,22 @@ html#no-js lang="ru"
           .col-lg-8.col-md-10.mx-auto
             ul.list-inline.text-center
               li.list-inline-item
-                a[href="#"]
+                a[href="#{settings.twitter}"]
                   span.fa-stack.fa-lg
                     i.fas.fa-circle.fa-stack-2x
                     i.fab.fa-twitter.fa-stack-1x.fa-inverse
               li.list-inline-item
-                a[href="#"]
+                a[href="#{settings.facebook}"]
                   span.fa-stack.fa-lg
                     i.fas.fa-circle.fa-stack-2x
                     i.fab.fa-facebook-f.fa-stack-1x.fa-inverse
               li.list-inline-item
-                a[href="#"]
+                a[href="#{settings.github}"]
                   span.fa-stack.fa-lg
                     i.fas.fa-circle.fa-stack-2x
                     i.fab.fa-github.fa-stack-1x.fa-inverse
             p.copyright.text-muted
-              | Copyright © Your Website 2018
+              = settings.copyright
 
     = javascript_pack_tag 'application'
     = yield :javascript
