@@ -322,7 +322,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    puma (3.12.1)
+    puma (3.12.3)
     rack (2.0.7)
     rack-protection (2.0.5)
       rack
@@ -548,7 +548,7 @@ DEPENDENCIES
   pg_search
   postal-rails (~> 1.0)
   pry
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 5.2.2)
   role_model
   rspec-rails
