@@ -550,6 +550,7 @@ DEPENDENCIES
   pry
   puma (~> 3.11)
   rails (~> 5.2.2)
+  redis (~> 4.0)
   role_model
   rspec-rails
   rubocop-rails
