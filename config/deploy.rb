@@ -1,4 +1,4 @@
-set :application, 'demo_adminos'
+set :application, 'adminos_example'
 set :repo_url, "git@github.com:Molinos/adminos_example.git"
 
 set :config_files, %w[config/database.yml .env]
