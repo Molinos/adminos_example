@@ -4,13 +4,17 @@ class Article < ApplicationRecord
   include Adminos::Recognizable
   include Adminos::NestedSet::Duplication
   include Adminos::Cropped
+  extend Mobility
 
   scope :sorted, -> { order(created_at: :desc) }
   scope :sort_by_publish_at, -> { order(publish_at: :desc) }
 
   paginates_per 10
 
-  has_rich_text :content
+  I18n.available_locales.each do |locale|
+    has_rich_text "content_#{locale}".to_sym
+  end
+
   has_one_attached :cover
 
   cropped :cover, version: :default, coord_attribute: :cover_coord
@@ -29,6 +33,11 @@ class Article < ApplicationRecord
 
   scoped_search on: :name
 
+  translates :name, :title, locale_accessors: true, ransack: true
+
+  def content
+    send("content_#{I18n.locale}")
+  end
 
   def reasonable_name
     if self.respond_to?(:translations)

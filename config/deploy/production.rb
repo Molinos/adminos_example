@@ -1,4 +1,4 @@
-server "demo.adminos.app", user: 'app', port: 22298, roles: %w(web app db), primary: true
+server "demo.adminos", user: 'app', roles: %w(web app db), primary: true
 
 set :domain, "demo.adminos.app"
 set :keep_releases, 5

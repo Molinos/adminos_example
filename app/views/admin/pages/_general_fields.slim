@@ -6,3 +6,7 @@
   = f.input :slug
   = f.input :published, wrapper: :check
   = f.input :nav_published, wrapper: :check
+
+  .f__legend= t 'labels.admin.legend.seo'
+  = f.input :meta_title
+  = f.input :meta_description, as: :string
