@@ -89,6 +89,7 @@ gem 'role_model' # from adminos
 gem 'webpacker', '~> 3.5' # from adminos
 gem 'actiontext', github: 'rails/actiontext', require: 'action_text', ref: 'cfe4674d3637c746cdb3c2b5131e2de498775529' # from adminos
 gem 'image_processing', '~> 1.2' # for Active Storage variants # from adminos
+gem 'activestorage-validator'
 gem 'whenever', require: false # from adminos
 gem 'capistrano-db-tasks', require: false # from adminos
 gem 'sanitize' # from adminos

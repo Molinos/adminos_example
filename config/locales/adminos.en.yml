@@ -64,7 +64,8 @@ en:
         whodunnit: User
       project_image:
         file: Photo
-
+      article:
+        cover: Cover image
   admin:
     welcome: Entrance to admin dashboard
     helps:

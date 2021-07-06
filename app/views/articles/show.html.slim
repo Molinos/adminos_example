@@ -8,7 +8,7 @@ header.masthead[style="background-image: url(#{rails_blob_path(@article.cover)})
           h1= @article.name
           h2.subheading= @article.title
           span.meta
-            | Posted by
+            | Posted by&nbsp;
             a[href="#"]
               | #{@article.user.email}
             |  on #{l(@article.publish_at)}
@@ -26,7 +26,7 @@ article
   .detailBox
     .titleBox
       label
-        | Comments
+        = t('activerecord.attributes.article.comments')
     .actionBox
       ul.commentList
         - @article.comments.each do |comment|
@@ -34,5 +34,10 @@ article
 
       = form_with url: article_comments_path(@article), html: { class: 'form-inline', role: 'form' } do |f|
         .form-group
+<<<<<<< HEAD
           input.form-control.form-control-lg[name="comment[body]" type="text" placeholder="Enter your comment"]
         = f.submit 'Send', class: 'btn btn-primary ml-3'
+=======
+          input.form-control.form-control-lg[name="comment[body]" type="text" placeholder="Your comments"]
+        = f.submit t('labels.admin.add'), class: 'btn btn-primary ml-3'
+>>>>>>> Article view improved

@@ -30,6 +30,7 @@ class Article < ApplicationRecord
   acts_as_recognizable :recognizable_name
 
   validates :name, presence: true
+  validates :cover, presence: true, blob: { content_type: :image }
 
   scoped_search on: :name
 
